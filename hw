@@ -1,0 +1,28 @@
+//3.Написать функцию котороая на вод принимает слово. Задача посчитать и вывести в консоль количество гласных и согласных.
+//use function getWordStucture(word)
+//В консоли: Слово (word) состоит из (число) гласных и (число) согласных букв
+
+const getWordStucture = function(word){
+    let n = 0;
+    let k = 0;
+    let gl=["a", "e", "i", "o", "u", "y"];                                                                                        
+    let sogl=["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"];                 
+        
+        for(i = 0; i < word.length; i++){
+            for(j = 0; j < gl.length; j++){
+                if(word[i] === gl[j] ){
+                    n++;
+                    break;
+                }
+            }
+            for(q= 0; q < sogl.length; q++){
+                if(word[i] === sogl[q]){
+                    k++;
+                    break;
+                }
+            }
+        }
+        console.log("Слово" + word + "состоит из" + n + "гласных и" + k + "согласных букв")
+    } 
+    getWordStucture("msdgdgweg")
+    
